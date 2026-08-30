@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+backups/
+staging_excel/
+supabase/.branches/
+supabase/.temp/
+__pycache__/
+*.pyc
+
