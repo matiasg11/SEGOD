@@ -1,2 +1,2 @@
-import LabApp from './lab-app';
-export default function Home(){return <LabApp/>}
+import LabSystem from './lab-system';
+export default function Home(){return <LabSystem/>}
