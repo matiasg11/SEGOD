@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
 @import 'tailwindcss';
 @import './system.css';
 .success{color:#245844;font-size:12px}.text-button{border:0;background:transparent;color:#245844;font-weight:750;cursor:pointer;padding:2px}.account-panel{margin-top:33px;max-width:620px}.account-panel>.body{margin:22px 0}.password-form{display:grid;gap:16px}.password-form label{font-size:12px;font-weight:700;color:#56615b}.password-form input{display:block;width:100%;margin-top:7px;border:1px solid #ccd5cf;border-radius:8px;padding:11px;background:#fff;color:#17231e}.password-form .primary{justify-self:start}
