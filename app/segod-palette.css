@@ -1,0 +1,3 @@
+/* Paleta final SEGOD: se carga después de la hoja histórica global. */
+:root{--ink:#142536;--muted:#627282;--line:#d6e0e8;--paper:#f3f6f8;--green:#002747;--deep:#002747;--lime:#ed561b}
+.sidebar,.login>section{background:#002747!important}.account{background:#001d35!important}.sidebar nav button{color:#d5e1e9!important}.sidebar nav button.active,.sidebar nav button:hover{background:#174d70!important}.brand small{color:#c6d4df!important}.account small{color:#a9c6d8!important}.account button,.success,.text-button{color:#ed561b!important}.modal-backdrop{background:#001d35aa!important}
