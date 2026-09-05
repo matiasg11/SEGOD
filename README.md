@@ -2,6 +2,12 @@
 
 Backend reproducible en Supabase para gestionar muestras, ensayos y datos crudos del laboratorio de SEGOD.
 
+## Aplicación web
+
+- Producción en GitHub Pages: <https://matiasg11.github.io/SEGOD/>
+- Producción en SEGOD Sites: <https://segod-laboratorio.matiasg11.chatgpt.site/>
+- Manual funcional: [`docs/MANUAL_DE_USO.md`](docs/MANUAL_DE_USO.md)
+
 ## Proyecto remoto
 
 - Supabase project ref: `bpanhapwtdsnjsdiyyro`
@@ -40,4 +46,3 @@ No guardar URLs de conexión, contraseñas ni backups reales en Git.
 4. Usar `supabase db push` para aplicar nuevas migraciones remotas.
 
 Consultar `docs/SUPABASE_MIGRATION.md` para el procedimiento completo.
-
