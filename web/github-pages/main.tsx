@@ -5,6 +5,7 @@ import '../app/globals.css';
 import '../app/system.css';
 import '../app/segod-palette.css';
 import './pages.css';
+import '../app/responsive-final.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode><LabSystem/></StrictMode>,
