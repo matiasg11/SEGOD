@@ -9,6 +9,28 @@
 :root{--ink:#142536;--muted:#627282;--line:#d6e0e8;--paper:#f3f6f8;--green:#002747;--deep:#002747;--lime:#ed561b;--orange:#ed561b;--cyan:#29abd3;--sky:#e8f5f9;--navy-soft:#e8eef4;--orange-soft:#fff0e8;--success:#27855d;--success-soft:#e0f4ea;--warning:#ac7500;--warning-soft:#fff2cc;--danger:#a23d35;--danger-soft:#fce9e6;--neutral:#5b6873;--neutral-soft:#edf1f4}
 .badge.aprobado,.badge.cumple,.badge.apto,.badge.vigente{background:var(--success-soft);color:#176645}.badge.observado,.badge.vencido,.badge.no-cumple,.badge.fuera-de-servicio{background:var(--danger-soft);color:var(--danger)}.badge.pendiente,.badge.ejecutado,.badge.datos-cargados,.badge.pendiente-de-revision{background:var(--warning-soft);color:var(--warning)}.badge.anulado,.badge.no-ensayado,.badge.n-a{background:var(--neutral-soft);color:var(--neutral)}.test-card.status-aprobado{background:#f7fcf9;border-color:#add8c0}.test-card.status-observado{background:#fff9f8;border-color:#ebc3bd}.test-card.status-no-ensayado,.test-card.status-anulado{background:#fafbfd;border-color:#d0d9df}.test-card.status-pendiente,.test-card.status-ejecutado,.test-card.status-datos-cargados{background:#fffdf7;border-color:#ecd79e}.test-card footer button,.edit-inline,.config-row button{background:var(--navy-soft);color:var(--deep)}.test-card footer button:hover,.edit-inline:hover,.config-row button:hover{background:#d8e5ef}.list-controls,.config-toolbar{background:var(--sky);border-color:#cce7f0}.calc-note{background:var(--navy-soft);color:var(--deep)}.calc-preview span{border-color:#c9dce8;background:#f8fbfd}.calc-preview strong{color:var(--deep)}.status-editor select,.list-controls select,.config-toolbar select,.form-grid select{border-color:#b9cedc}.raw-card pre{background:var(--deep);color:#dcecf5}
 
+/* Prioridad final para la navegación responsive. */
+@media(max-width:850px){
+ body{overflow-x:hidden}
+ .app-shell{display:block}
+ .app-shell .sidebar{display:flex;position:fixed;z-index:100;inset:0 auto 0 0;width:min(86vw,310px);padding:22px 18px calc(18px + env(safe-area-inset-bottom));transform:translateX(-105%);transition:transform .22s ease;box-shadow:10px 0 34px #001b3166}
+ .app-shell:has(.mobile-nav-toggle:checked) .sidebar{transform:translateX(0)}
+ .workspace{padding:12px 12px calc(28px + env(safe-area-inset-bottom))}
+ .topbar{position:sticky;z-index:50;top:0;display:grid;grid-template-columns:46px minmax(0,1fr);align-items:center;gap:10px;padding:10px 0 12px;flex-wrap:nowrap;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(10px)}
+ .header-menu-button{display:flex}
+ .top-actions{grid-column:1/-1;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto}
+ .metrics-4{grid-template-columns:repeat(2,minmax(0,1fr));margin:14px 0}
+ .test-card.test-accordion{padding:0}
+ .modal-backdrop{padding:0;align-items:end}
+ .modal{max-height:96dvh;border-radius:18px 18px 0 0}
+}
+@media(max-width:460px){
+ .metrics-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .topbar{padding-left:0}
+ .top-actions{grid-template-columns:1fr}
+ .detail-actions{display:grid;grid-template-columns:1fr}
+}
+
 /* Navegación, indicadores accionables y superficies expandibles. */
 .header-menu-button,.mobile-nav-close,.nav-scrim{display:none}
 .metric-card{appearance:none;border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff;color:var(--ink);text-align:left;cursor:pointer;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
