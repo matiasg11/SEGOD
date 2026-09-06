@@ -76,7 +76,7 @@ La sección **Datos crudos** está reservada al administrador y agrupa registros
 
 ## 7. Personal, equipos y documentos
 
-- **Personal:** el administrador puede agregar, editar o dar de baja personas. La baja es lógica y conserva el historial. También se registran capacitaciones y vencimientos.
+- **Personal:** el administrador puede agregar personas y asignarles nombre de usuario, correo, contraseña provisoria, rol y permisos. Al editar una persona puede cambiar el usuario o correo y establecer una contraseña nueva; por seguridad, la contraseña actual nunca se muestra. La baja es lógica, bloquea el acceso y conserva el historial. Al reactivar a una persona se rehabilita su cuenta. También se registran capacitaciones y vencimientos.
 - **Equipos:** permite ordenar y filtrar por vigencia, editar la ficha y registrar calibraciones, verificaciones o mantenimientos.
 - **Documentos:** registra código, versión, vigencia, responsable y vínculo al documento.
 - **Configuración:** el administrador mantiene las opciones de los menús desplegables sin editar código.
@@ -88,6 +88,16 @@ La sección **Datos crudos** está reservada al administrador y agrupa registros
 - **Responsable del laboratorio:** puede editar y eliminar muestras, revisar ensayos y operar según sus permisos.
 - **Analista:** carga muestras, ejecuta ensayos y agrega nuevas secuencias de datos según sus permisos.
 - **Consulta:** acceso de lectura a las vistas habilitadas.
+
+### Crear o modificar un acceso
+
+1. Entrar a **Personal** como administrador.
+2. Tocar **Agregar personal**, o **Editar y gestionar acceso** en una persona existente.
+3. Completar un nombre de usuario único, correo y contraseña provisoria. En una cuenta existente, dejar la contraseña vacía conserva la actual; escribir otra la reemplaza.
+4. Elegir rol, estado y permisos, y guardar.
+5. La persona podrá ingresar inmediatamente con el nombre de usuario o con el correo y la contraseña asignada.
+
+Las contraseñas se guardan cifradas en Supabase Auth y no forman parte de la tabla de Personal, los backups ni la auditoría. Si la persona la olvida, puede usar **Olvidé mi contraseña** con su usuario o correo.
 
 ## 9. Uso desde el teléfono
 
