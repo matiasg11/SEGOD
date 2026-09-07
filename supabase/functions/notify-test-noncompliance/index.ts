@@ -14,7 +14,10 @@ const respond = (body: unknown, status = 200) => new Response(JSON.stringify(bod
 function envKey(jsonName: string, legacyName: string) {
   try {
     const values = JSON.parse(Deno.env.get(jsonName) ?? '{}')
-    if (values.default) return String(values.default)
+    if (values.default) {
+      const selected = String(values.default)
+      return Deno.env.get(selected) ?? selected
+    }
   } catch {
     // Se usa la variable compatible de respaldo.
   }
@@ -64,8 +67,11 @@ Deno.serve(async (req: Request) => {
     return respond({ ok: true, email_sent: false, skipped: 'El ensayo no está marcado como No cumple.' })
   }
 
-  const { data: recipientsRows } = await admin.from('staff').select('id,email')
-    .eq('status', 'Activo').or(`id.eq.${test.assigned_to},can_manage_records.eq.true`)
+  let recipientsQuery = admin.from('staff').select('id,email').eq('status', 'Activo')
+  recipientsQuery = test.assigned_to
+    ? recipientsQuery.or(`id.eq.${test.assigned_to},can_manage_records.eq.true`)
+    : recipientsQuery.eq('can_manage_records', true)
+  const { data: recipientsRows } = await recipientsQuery
   const recipients = [...new Set((recipientsRows ?? []).map(row => row.email?.toLowerCase()).filter(Boolean))] as string[]
   if (!recipients.length) return respond({ error: 'No hay correos válidos para el responsable o el administrador.' }, 422)
 
