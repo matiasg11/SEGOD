@@ -84,8 +84,17 @@ La sección **Datos crudos** está reservada al administrador y agrupa registros
 - **Personal:** el administrador puede agregar personas y asignarles nombre de usuario, correo, contraseña provisoria, rol y permisos. Al editar una persona puede cambiar el usuario o correo y establecer una contraseña nueva; por seguridad, la contraseña actual nunca se muestra. La baja es lógica, bloquea el acceso y conserva el historial. Al reactivar a una persona se rehabilita su cuenta. También se registran capacitaciones y vencimientos.
 - **Equipos:** permite ordenar y filtrar por vigencia, editar la ficha y registrar calibraciones, verificaciones o mantenimientos.
 - **Documentos:** registra código, versión, vigencia, responsable y vínculo al documento.
-- **Configuración:** el administrador mantiene las opciones de los menús desplegables sin editar código.
+- **Configuración:** el administrador mantiene las opciones de los menús desplegables y el catálogo maestro de ensayos sin editar código.
 - **Auditoría:** muestra los cambios y responsables para mantener la trazabilidad.
+
+### Agregar o modificar tipos de ensayo
+
+1. Entrar a **Configuración** como administrador.
+2. En **Catálogo de ensayos**, usar **Agregar ensayo** o buscar uno existente y tocar **Editar**.
+3. Completar nombre, norma, método, formulario de medición, unidad por defecto, equipo principal y equipamiento requerido.
+4. Mantenerlo **Activo** para que aparezca al asignar ensayos a muestras. Elegir **Inactivo** para retirarlo de nuevas asignaciones sin borrar su historial.
+
+El formulario de medición determina los campos que se solicitan y el cálculo automático aplicable. Los datos crudos ya guardados no se modifican cuando cambia o se inactiva una definición del catálogo.
 
 ## 8. Permisos
 
