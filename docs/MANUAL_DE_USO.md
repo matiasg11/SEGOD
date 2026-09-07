@@ -34,7 +34,7 @@ En **Muestras** se puede ordenar por ingreso, nombre, ID, material o solicitante
 ### Acciones en lote
 
 1. Marcar muestras individuales o **Seleccionar las visibles**.
-2. Elegir una acción: enviar a revisión, aprobar, observar o marcar como No Ensayado.
+2. Elegir una acción: enviar a revisión, aprobar, observar, marcar como No ensayado o anular.
 3. Tocar **Aplicar**.
 
 La acción afecta solamente los ensayos vigentes y compatibles con esa transición.
@@ -45,17 +45,22 @@ El administrador y el Responsable del laboratorio pueden editar una muestra. Al 
 
 ## 4. Ensayos
 
-En **Ensayos** se puede ordenar y filtrar por estado, seleccionar varios y enviarlos juntos a revisión. Los aprobados permanecen ocultos en la vista activa y se muestran al cambiar el filtro.
+En **Ensayos** se puede ordenar y filtrar por estado, seleccionar varios y enviarlos juntos a revisión. Los estados finales permanecen fuera de la vista activa y se muestran al cambiar el filtro.
 
-Abrir una tarjeta para:
+El circuito de estados es controlado:
 
-- cambiar el estado;
-- agregar una nueva secuencia de datos;
-- cambiar ensayo o responsable (administrador);
-- repetir, enviar a revisión, aprobar, observar o marcar No Ensayado;
-- eliminar el ensayo con motivo y opción inmediata de deshacer.
+1. Todo ensayo nuevo comienza **Pendiente**.
+2. Al guardar la primera secuencia pasa automáticamente a **Datos cargados**. No puede volver a Pendiente mientras existan datos.
+3. Desde **Datos cargados** se puede **Enviar a revisión**, quedando **Pendiente de revisión**.
+4. En revisión se puede aprobar u observar. **Aprobado** queda bloqueado para todos salvo el administrador.
+5. Al observar, el ensayo original queda **Observado** y el sistema crea automáticamente una nueva repetición **Pendiente**, con el mismo responsable y equipo.
+6. **Anulado** y **No ensayado** son estados finales bloqueados. No existe N/A como estado de ensayo; N/A sigue disponible únicamente para campos o mediciones que no aplican.
+
+El administrador puede cambiar el ensayo o su responsable y corregir registros finalizados. Ningún cambio administrativo altera los datos crudos ya almacenados.
 
 Las unidades, el formulario y el equipo principal se completan según el catálogo. Los valores vacíos se consideran N/A y no participan de promedios ni niveles. En pH, el índice de diferencia y el cumplimiento se calculan automáticamente.
+
+Cuando el resultado calculado es **No cumple**, el sistema crea una alerta trazable y envía un correo al responsable asignado y a todos los administradores activos. Si el proveedor de correo no está disponible, la alerta queda pendiente con el detalle del error para reintentarla.
 
 ## 5. Datos crudos
 
@@ -112,6 +117,6 @@ Las contraseñas se guardan cifradas en Supabase Auth y no forman parte de la ta
 1. Crear la muestra y asignar responsable.
 2. Ejecutar los ensayos y agregar datos en secuencias.
 3. Enviar a revisión individualmente o en lote.
-4. Aprobar, observar o marcar No Ensayado.
+4. Aprobar, observar, marcar No ensayado o anular. Al observar se crea sola la repetición pendiente.
 5. Descargar el QF-04 y validar el resumen con su QR.
 6. Exportar backups periódicos desde Datos crudos.
