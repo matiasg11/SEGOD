@@ -105,7 +105,7 @@ El tipo de cálculo determina cómo se obtiene el resultado, nivel y cumplimient
    - **Obligatorio:** debe completarse para guardar la medición.
    - **Opcional:** puede quedar vacío y no interviene en cálculos.
    - **Fijo:** muestra el valor configurado y el usuario no puede cambiarlo.
-5. El tipo **Lista de opciones** permite escribir las opciones disponibles, una por línea. Si se activa **Permitir que el usuario agregue texto**, también acepta un valor nuevo escrito por el analista.
+5. El tipo **Lista de opciones** permite escribir las opciones disponibles, una por línea. Si se activa **Permitir que el usuario agregue texto**, también acepta un valor nuevo escrito por el analista y lo incorpora automáticamente a la lista para las cargas siguientes.
 6. Guardar el campo. El cambio se aplica en la próxima apertura del formulario de carga.
 
 Los campos numéricos aceptan únicamente números o N/A. Los datos crudos guardados continúan siendo inmutables aunque después se cambie el formulario.
