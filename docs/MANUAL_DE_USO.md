@@ -41,7 +41,7 @@ La acción afecta solamente los ensayos vigentes y compatibles con esa transici�
 
 ### Editar o eliminar
 
-El administrador y el Responsable del laboratorio pueden editar una muestra. Al cambiar los ensayos asignados, los marcados se agregan y los desmarcados se archivan con trazabilidad. Al eliminar una muestra, también se archivan sus ensayos asociados; la auditoría conserva el historial.
+El administrador y el Responsable del laboratorio pueden editar una muestra. Al cambiar los ensayos asignados, los marcados se agregan y los desmarcados se archivan con trazabilidad. Al eliminar una muestra, también se archivan sus ensayos asociados y dejan de mostrarse sus datos crudos; la auditoría conserva el historial. Los datos crudos no se modifican ni se borran y continúan incluidos en el backup completo.
 
 ## 4. Ensayos
 
