@@ -93,6 +93,7 @@ La sección **Datos crudos** está reservada al administrador y agrupa registros
 2. En **Catálogo de ensayos**, usar **Agregar ensayo** o buscar uno existente y tocar **Editar**.
 3. Completar nombre, norma, método, formulario de medición, unidad por defecto, equipo principal y equipamiento requerido.
 4. Mantenerlo **Activo** para que aparezca al asignar ensayos a muestras. Elegir **Inactivo** para retirarlo de nuevas asignaciones sin borrar su historial.
+5. Usar **Eliminar** para quitar un ensayo que no sirve. Si nunca fue utilizado, se elimina junto con su formulario y reglas automáticas. Si ya fue utilizado, el sistema lo desactiva y conserva los resultados históricos.
 
 El tipo de cálculo determina cómo se obtiene el resultado, nivel y cumplimiento. Los datos crudos ya guardados no se modifican cuando cambia o se inactiva una definición del catálogo.
 

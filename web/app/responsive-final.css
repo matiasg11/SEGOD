@@ -24,7 +24,9 @@
 /* Configuración de formularios de ensayo. */
 .config-actions{display:flex!important;flex-wrap:wrap;align-items:stretch;gap:8px}
 .config-actions button{min-height:40px;display:inline-flex;align-items:center;justify-content:center;line-height:1.2}
-.catalog-config-row{grid-template-columns:minmax(260px,1fr) 110px 90px minmax(210px,auto)}
+.catalog-config-row{grid-template-columns:minmax(260px,1fr) 110px 90px minmax(300px,auto)}
+.config-actions .danger-button{background:var(--danger-soft);color:var(--danger);border:1px solid #e3b7b2}
+.config-actions .danger-button:hover{background:#f8d9d4}
 .rule-picker{margin-top:16px}
 .config-save-row{display:flex;justify-content:flex-end;align-items:center;gap:12px;margin-top:14px}
 .designer{padding:24px}
