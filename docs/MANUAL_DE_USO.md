@@ -94,7 +94,29 @@ La sección **Datos crudos** está reservada al administrador y agrupa registros
 3. Completar nombre, norma, método, formulario de medición, unidad por defecto, equipo principal y equipamiento requerido.
 4. Mantenerlo **Activo** para que aparezca al asignar ensayos a muestras. Elegir **Inactivo** para retirarlo de nuevas asignaciones sin borrar su historial.
 
-El formulario de medición determina los campos que se solicitan y el cálculo automático aplicable. Los datos crudos ya guardados no se modifican cuando cambia o se inactiva una definición del catálogo.
+El tipo de cálculo determina cómo se obtiene el resultado, nivel y cumplimiento. Los datos crudos ya guardados no se modifican cuando cambia o se inactiva una definición del catálogo.
+
+### Configurar los campos de cada formulario
+
+1. Entrar a **Configuración > Catálogo de ensayos**.
+2. Buscar el ensayo y tocar **Configurar formulario**.
+3. Recorrer sus campos en el orden en que se mostrarán; usar **Agregar campo**, **Editar** o **Eliminar** según corresponda.
+4. Para cada campo definir el texto visible, una clave interna única, tipo de dato, unidad, orden y condición:
+   - **Obligatorio:** debe completarse para guardar la medición.
+   - **Opcional:** puede quedar vacío y no interviene en cálculos.
+   - **Fijo:** muestra el valor configurado y el usuario no puede cambiarlo.
+5. El tipo **Lista de opciones** permite escribir las opciones disponibles, una por línea. Si se activa **Permitir que el usuario agregue texto**, también acepta un valor nuevo escrito por el analista.
+6. Guardar el campo. El cambio se aplica en la próxima apertura del formulario de carga.
+
+Los campos numéricos aceptan únicamente números o N/A. Los datos crudos guardados continúan siendo inmutables aunque después se cambie el formulario.
+
+### Configurar qué ensayos se marcan automáticamente
+
+1. En **Configuración > Selección automática de ensayos**, elegir la norma o tipo de solicitud, por ejemplo **Ensayos de rutina**.
+2. Marcar solamente los ensayos que deben aparecer seleccionados de manera predeterminada.
+3. Tocar **Guardar selección automática**.
+
+Al crear o editar una muestra, elegir esa norma aplica la selección configurada. Antes de guardar, el usuario puede marcar o desmarcar manualmente cualquier ensayo.
 
 ## 8. Permisos
 
