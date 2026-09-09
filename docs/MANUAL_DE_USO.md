@@ -29,7 +29,7 @@ Las tarjetas de ensayos, informes, equipos y grupos de datos crudos muestran pri
 
 ### Buscar, ordenar y filtrar
 
-En **Muestras** se puede ordenar por ingreso, nombre, ID, material o solicitante. El selector de estado permite ver todas, las pendientes/abiertas, las ingresadas hoy o un estado concreto.
+En **Muestras** se puede ordenar por ingreso, Label ID, material o solicitante. El selector de estado permite ver todas, las pendientes/abiertas, las ingresadas hoy o un estado concreto. El identificador interno se conserva solamente en la base de datos; la interfaz utiliza el Label ID formado como **Producto - Modelo - Talle** o **Producto - Lote - Partida**, según corresponda.
 
 ### Acciones en lote
 
@@ -44,6 +44,13 @@ La acción afecta solamente los ensayos vigentes y compatibles con esa transici�
 El administrador y el Responsable del laboratorio pueden editar una muestra. Al cambiar los ensayos asignados, los marcados se agregan y los desmarcados se archivan con trazabilidad. Al eliminar una muestra, también se archivan sus ensayos asociados y dejan de mostrarse sus datos crudos; la auditoría conserva el historial. Los datos crudos no se modifican ni se borran y continúan incluidos en el backup completo.
 
 ## 4. Ensayos
+
+### Agregar una ejecución
+
+1. Tocar **Nueva ejecución** y elegir la muestra por su **Label ID**.
+2. Elegir uno de los ensayos asignados a esa muestra. Los ensayos no seleccionados al crear o editar la muestra no aparecen en esta lista.
+3. El responsable se precarga desde la asignación de la muestra, la fecha programada se fija en el día actual y el equipo se completa desde la configuración del ensayo.
+4. Guardar. La nueva ejecución queda **Pendiente** con el siguiente número de repetición disponible.
 
 En **Ensayos** se puede ordenar y filtrar por estado, seleccionar varios y enviarlos juntos a revisión. Los estados finales permanecen fuera de la vista activa y se muestran al cambiar el filtro.
 
