@@ -54,7 +54,9 @@ El administrador y el Responsable del laboratorio pueden editar una muestra. Al 
 3. El responsable se precarga desde la asignación de la muestra, la fecha programada se fija en el día actual y el equipo se completa desde la configuración del ensayo.
 4. Guardar. La nueva ejecución queda **Pendiente** con el siguiente número de repetición disponible.
 
-En **Ensayos** se puede ordenar y filtrar por estado, muestra, producto, tipo de ensayo y responsable. Los botones de acceso rápido muestran cuántos hay Pendientes, con Datos cargados, Pendientes de revisión, Aprobados, Observados, Anulados y No ensayados. También se pueden seleccionar varios y enviarlos juntos a revisión.
+En **Ensayos** las ejecuciones se muestran siempre de la más nueva a la más antigua. Se pueden filtrar por estado, muestra, producto, tipo de ensayo y responsable. Los botones de acceso rápido muestran cuántos hay Pendientes, con Datos cargados, Pendientes de revisión, Aprobados, Observados, Anulados y No ensayados.
+
+Para trabajar en lote, aplicar los filtros necesarios, marcar **Seleccionar todos los visibles**, elegir **Enviar a revisión** o **Aprobar** y tocar **Aplicar**. Al pedir una aprobación masiva, solamente se aprueban los ensayos que ya están **Pendientes de revisión**. Si dentro de la selección hay ensayos con **Datos cargados**, el sistema impide su aprobación directa, avisa antes de continuar y los pasa a **Pendiente de revisión**. Al finalizar informa cuántos fueron aprobados, enviados a revisión, omitidos o tuvieron error.
 
 El circuito de estados es controlado:
 
