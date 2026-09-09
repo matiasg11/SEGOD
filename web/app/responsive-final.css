@@ -34,6 +34,18 @@
 .designer-head p{max-width:520px;margin:0;color:var(--muted);font-size:13px;line-height:1.5}
 .field-config-row{grid-template-columns:minmax(240px,1fr) 105px 85px minmax(145px,auto)}
 
+/* Filtros automáticos de muestras y ensayos. */
+.field-filters{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr)) auto;gap:10px;align-items:end;margin:-8px 0 16px;padding:12px;background:var(--sky);border:1px solid #cce7f0;border-radius:12px}
+.field-filters label{display:flex;flex-direction:column;gap:6px;min-width:0;color:var(--muted);font-size:11px;font-weight:750}
+.field-filters select{width:100%;min-width:0;min-height:42px;padding:8px 32px 8px 10px;border:1px solid #b9cedc;border-radius:8px;background:#fff;color:var(--deep)}
+.clear-filters{min-height:42px;padding:8px 13px;border:1px solid #b9cedc;border-radius:8px;background:#fff;color:var(--deep);font-weight:750;cursor:pointer;white-space:nowrap}
+.clear-filters:hover{background:var(--navy-soft)}
+.status-filter-strip{display:flex;flex-wrap:wrap;gap:8px;margin:-8px 0 16px}
+.status-filter-strip button{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:7px 11px;border:1px solid #c9dce8;border-radius:999px;background:#fff;color:var(--deep);font-weight:700;cursor:pointer}
+.status-filter-strip button strong{display:inline-flex;align-items:center;justify-content:center;min-width:23px;height:23px;padding:0 6px;border-radius:999px;background:var(--navy-soft)}
+.status-filter-strip button.active{border-color:var(--orange);background:#fff3ed;color:#a43a0d}
+.status-filter-strip button.active strong{background:var(--orange);color:#fff}
+
 @media(max-width:850px){
   .catalog-config-row,.field-config-row{grid-template-columns:minmax(0,1fr)!important}
   .catalog-config-row>span,.field-config-row>span{display:inline-flex!important}
@@ -45,4 +57,13 @@
   .designer-head{align-items:stretch;flex-direction:column}
   .designer-head .primary{width:100%}
   .rule-picker{grid-template-columns:1fr}
+  .field-filters{grid-template-columns:1fr 1fr;margin:0 0 12px}
+  .field-filters .clear-filters{grid-column:1/-1;width:100%}
+  .status-filter-strip{display:grid;grid-template-columns:1fr 1fr;margin:0 0 12px}
+  .status-filter-strip button{justify-content:space-between;border-radius:10px;min-height:44px}
+}
+
+@media(max-width:460px){
+  .field-filters,.status-filter-strip{grid-template-columns:1fr}
+  .field-filters .clear-filters{grid-column:auto}
 }

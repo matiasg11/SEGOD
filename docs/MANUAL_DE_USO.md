@@ -29,7 +29,9 @@ Las tarjetas de ensayos, informes, equipos y grupos de datos crudos muestran pri
 
 ### Buscar, ordenar y filtrar
 
-En **Muestras** se puede ordenar por ingreso, Label ID, material o solicitante. El selector de estado permite ver todas, las pendientes/abiertas, las ingresadas hoy o un estado concreto. El identificador interno se conserva solamente en la base de datos; la interfaz utiliza el Label ID formado como **Producto - Modelo - Talle** o **Producto - Lote - Partida**, según corresponda.
+En **Muestras** se puede ordenar por ingreso, Label ID, material o solicitante. Los filtros de Producto, Lote y Modelo se completan automáticamente con los valores registrados. El filtro **Avance de ensayos** separa las muestras con pendientes de las completadas; una muestra queda completada cuando tiene ensayos asociados y ninguno permanece en estado Pendiente. El selector de estado permite ver todas, las pendientes/abiertas, las ingresadas hoy o un estado concreto. El identificador interno se conserva solamente en la base de datos; la interfaz utiliza el Label ID formado como **Producto - Modelo - Talle** o **Producto - Lote - Partida**, según corresponda.
+
+Al abrir una muestra, cada ensayo pendiente o con datos cargados ofrece el botón **Agregar datos**. Esto abre directamente su formulario de medición sin abandonar la ficha de la muestra.
 
 ### Acciones en lote
 
@@ -52,7 +54,7 @@ El administrador y el Responsable del laboratorio pueden editar una muestra. Al 
 3. El responsable se precarga desde la asignación de la muestra, la fecha programada se fija en el día actual y el equipo se completa desde la configuración del ensayo.
 4. Guardar. La nueva ejecución queda **Pendiente** con el siguiente número de repetición disponible.
 
-En **Ensayos** se puede ordenar y filtrar por estado, seleccionar varios y enviarlos juntos a revisión. Los estados finales permanecen fuera de la vista activa y se muestran al cambiar el filtro.
+En **Ensayos** se puede ordenar y filtrar por estado, muestra, producto, tipo de ensayo y responsable. Los botones de acceso rápido muestran cuántos hay Pendientes, con Datos cargados, Pendientes de revisión, Aprobados, Observados, Anulados y No ensayados. También se pueden seleccionar varios y enviarlos juntos a revisión.
 
 El circuito de estados es controlado:
 
